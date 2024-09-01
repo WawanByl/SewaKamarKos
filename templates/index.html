@@ -4,22 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sewa Kamar Kos</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-    <link rel="icon" href="{{ url_for('static', filename='favicon.png') }}" type="image/png">
 </head>
 <body>
-    <header>
-        <h1>Selamat Datang di Situs Sewa Kamar Kos</h1>
-    </header>
-    <main>
-        <h2>Daftar Kamar Kos Tersedia</h2>
-        <div id="kamar-list">
-            <!-- Tempat untuk menampilkan daftar kamar -->
+    <h1>Daftar Kamar Kos</h1>
+    <div id="kamar-list">
+        {% for kamar in kamar_list %}
+        <div class="kamar-item">
+            <h3>{{ kamar.nama }}</h3>
+            <p>Harga: {{ kamar.harga }}</p>
+            <p>Lokasi: {{ kamar.lokasi }}</p>
+            <!-- Menampilkan gambar untuk tiap kamar -->
+            <img src="{{ url_for('static', filename='images/' + kamar.foto) }}" alt="{{ kamar.nama }}" style="width:200px;height:auto;">
         </div>
-    </main>
-    <footer>
-        <p>&copy; 2024 Sewa Kamar Kos</p>
-    </footer>
-    <script src="{{ url_for('static', filename='app.js') }}"></script>
+        {% endfor %}
+    </div>
 </body>
 </html>
