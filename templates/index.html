@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sewa Kamar Kos</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="icon" href="{{ url_for('static', filename='favicon.png') }}" type="image/png">
+</head>
+<body>
+    <header>
+        <h1>Selamat Datang di Situs Sewa Kamar Kos</h1>
+    </header>
+    <main>
+        <h2>Daftar Kamar Kos Tersedia</h2>
+        <div id="kamar-list">
+            <!-- Tempat untuk menampilkan daftar kamar -->
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 Sewa Kamar Kos</p>
+    </footer>
+    <script src="{{ url_for('static', filename='app.js') }}"></script>
+</body>
+</html>
