@@ -12,7 +12,7 @@
     <h1>Daftar Kamar Kos</h1>
     <div id="kamar-list">
         {% for kamar in kamar_list %}
-        <div class="kamar-item">
+        <div class="kamar-item" data-deskripsi="{{ kamar.deskripsi }}">
             <h3>{{ kamar.nama }}</h3>
             <p>Harga: {{ kamar.harga }}</p>
             <p>Lokasi: {{ kamar.lokasi }}</p>
