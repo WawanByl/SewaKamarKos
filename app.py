@@ -4,6 +4,10 @@ import os
 app = Flask(__name__)
 
 @app.route('/')
+def landing():
+    return render_template('landing.html')
+
+@app.route('/home')
 def home():
     # Data dummy kamar kos dengan foto
     kamar_list = [

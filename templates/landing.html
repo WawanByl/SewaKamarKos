@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page - SewaKamarKos</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='landing.css') }}">
+</head>
+<body>
+    <div class="container">
+        <!-- Bagian Logo dan Nama Perusahaan -->
+        <div class="header">
+            <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Logo Perusahaan" class="logo">
+            <h1>Kost nyaman di tengah kota</h1>
+        </div>
+
+        <!-- Bagian Foto Bangunan -->
+        <div class="photos">
+            <img src="{{ url_for('static', filename='images/outdoor1.jpg') }}" alt="Bangunan 1" class="photo">
+            <img src="{{ url_for('static', filename='images/outdoor2.jpg') }}" alt="Bangunan 2" class="photo">
+            <img src="{{ url_for('static', filename='images/outdoor3.jpg') }}" alt="Bangunan 3" class="photo">
+        </div>
+
+        <!-- Tombol untuk Masuk ke Halaman Utama -->
+        <div class="enter-button">
+            <a href="{{ url_for('home') }}" class="button">Masuk</a>
+        </div>
+    </div>
+</body>
+</html>
+
